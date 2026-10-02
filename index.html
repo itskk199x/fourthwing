@@ -7,25 +7,26 @@
 <meta name="description" content="A spoiler-safe character guide to Rebecca Yarros's Empyrean series — Fourth Wing, Iron Flame, and Onyx Storm.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Marcellus+SC&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --navh: 0px;
-    --bg: #0a0c11;
-    --panel: #141a23;
-    --panel2: #0c1016;
-    --edge: rgba(140,180,220,.14);
-    --volt: #5ec8ff;
-    --volt-b: #a5e2ff;
-    --ember: #ff6b3d;
-    --ember-b: #ffa177;
-    --crimson: #e0394c;
-    --bronze: #c9a86a;
-    --ink: #e7edf4;
-    --muted: #8795a8;
-    --display: 'Oswald', 'Arial Narrow', sans-serif;
+    --bg: #07080a;
+    --panel: #11141a;
+    --panel2: #0a0c10;
+    --edge: rgba(190,202,218,.11);
+    --edge-str: rgba(190,202,218,.26);
+    --stone: #8d98a8;
+    --bone: #e2dccf;
+    --bone-dim: #a9a394;
+    --amber: #c08a2e;
+    --amber-b: #e3b662;
+    --steel: #7d91a6;
+    --ink: #dce2ea;
+    --muted: #767f8c;
+    --display: 'Cinzel', Georgia, serif;
     --body: 'Spectral', Georgia, serif;
-    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --label: 'Marcellus SC', Georgia, serif;
     font-size: 16px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,214 +34,182 @@
   body {
     overflow-x: clip;
     background:
-      radial-gradient(1000px 600px at 50% -10%, rgba(94,200,255,.13), transparent 62%),
-      radial-gradient(760px 520px at 92% 14%, rgba(255,107,61,.10), transparent 60%),
-      radial-gradient(700px 540px at 4% 70%, rgba(224,57,76,.08), transparent 60%),
-      repeating-linear-gradient(115deg, rgba(255,255,255,.012) 0 2px, transparent 2px 7px),
-      linear-gradient(180deg, #0c0f16 0%, var(--bg) 46%, #07090d 100%);
+      radial-gradient(1100px 620px at 50% -12%, rgba(150,170,195,.11), transparent 64%),
+      radial-gradient(820px 520px at 88% 22%, rgba(192,138,46,.055), transparent 60%),
+      radial-gradient(900px 600px at 6% 72%, rgba(125,145,166,.07), transparent 62%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.012) 0 1px, transparent 1px 9px),
+      linear-gradient(180deg, #0a0c10 0%, var(--bg) 42%, #050608 100%);
     color: var(--ink);
     font-family: var(--body);
     min-height: 100vh;
   }
 
   /* ---------- Header ---------- */
-  header { text-align: center; padding: 4.6rem 1rem 2.2rem; }
-  .mark { margin-bottom: 1.4rem; }
-  .mark svg { width: 86px; height: 72px; filter: drop-shadow(0 0 16px rgba(94,200,255,.35)); }
+  header { text-align: center; padding: 5rem 1rem 2.2rem; }
+  .mark { margin-bottom: 1.5rem; }
+  .mark svg { width: 128px; height: 66px; filter: drop-shadow(0 6px 22px rgba(0,0,0,.8)); }
   header .eyebrow {
-    font-family: var(--mono);
+    font-family: var(--label);
     letter-spacing: .46em; text-indent: .46em; text-transform: uppercase;
-    font-size: .62rem; color: var(--volt); margin-bottom: 1.1rem;
+    font-size: .64rem; color: var(--amber); margin-bottom: 1.15rem;
   }
   header h1 {
     font-family: var(--display); font-weight: 700;
-    font-size: clamp(2.4rem, 7vw, 4.6rem);
-    letter-spacing: .1em; text-transform: uppercase;
-    color: #f2f6fb; line-height: 1.02;
-    text-shadow: 0 0 34px rgba(94,200,255,.35), 0 0 70px rgba(255,107,61,.14);
+    font-size: clamp(2.3rem, 7vw, 4.4rem);
+    letter-spacing: .13em; text-transform: uppercase;
+    color: var(--bone); line-height: 1.05;
+    text-shadow: 0 2px 30px rgba(0,0,0,.9), 0 0 48px rgba(170,185,205,.14);
   }
   header .subtitle {
-    font-family: var(--mono); font-size: .7rem;
-    letter-spacing: .42em; text-indent: .42em; text-transform: uppercase;
-    color: var(--ember-b); margin-top: 1rem;
+    font-family: var(--label); font-size: .7rem;
+    letter-spacing: .4em; text-indent: .4em; text-transform: uppercase;
+    color: var(--stone); margin-top: 1rem;
   }
   header p.sub { margin-top: 1.25rem; color: var(--muted); font-size: 1.14rem; font-style: italic; }
   .ornament {
-    margin: 1.9rem auto 0; width: min(340px, 68%); height: 1px;
-    background: linear-gradient(90deg, transparent, var(--volt), var(--ember), transparent);
-    position: relative; box-shadow: 0 0 14px rgba(94,200,255,.3);
+    margin: 1.9rem auto 0; width: min(360px, 70%); height: 1px;
+    background: linear-gradient(90deg, transparent, var(--edge-str) 20%, var(--amber) 50%, var(--edge-str) 80%, transparent);
+    position: relative;
   }
   .ornament .gem { display: none; }
 
   /* ---------- Controls ---------- */
   .controls {
     position: sticky; top: var(--navh); z-index: 50;
-    background: rgba(9,12,17,.96);
+    background: rgba(6,8,11,.97);
     border-top: 1px solid var(--edge); border-bottom: 1px solid var(--edge);
     padding: .95rem 1rem .85rem;
   }
-  .controls-inner {
-    max-width: 1140px; margin: 0 auto;
-    display: flex; flex-wrap: wrap; gap: .9rem 2.2rem;
-    align-items: center; justify-content: center;
-  }
+  .controls-inner { max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: .9rem 2.2rem; align-items: center; justify-content: center; }
   .ctl { display: flex; align-items: center; gap: .65rem; }
-  .ctl label {
-    font-family: var(--mono); font-size: .6rem; letter-spacing: .26em;
-    text-transform: uppercase; color: var(--volt); white-space: nowrap;
-  }
+  .ctl label { font-family: var(--label); font-size: .62rem; letter-spacing: .24em; text-transform: uppercase; color: var(--amber); white-space: nowrap; }
   #search {
-    background: rgba(10,13,19,.85); border: 1px solid var(--edge); border-radius: 3px;
+    background: rgba(8,10,14,.9); border: 1px solid var(--edge); border-radius: 2px;
     color: var(--ink); font-family: var(--body); font-size: 1.04rem;
-    padding: .45rem .8rem; width: min(290px, 64vw); outline: none;
-    transition: border-color .2s, box-shadow .2s;
+    padding: .45rem .8rem; width: min(290px, 64vw); outline: none; transition: border-color .2s;
   }
-  #search:focus { border-color: var(--volt); box-shadow: 0 0 0 2px rgba(94,200,255,.18); }
-  #search::placeholder { color: #5b687a; font-style: italic; }
+  #search:focus { border-color: var(--amber); }
+  #search::placeholder { color: #5a626e; font-style: italic; }
   select#progress {
-    background: rgba(10,13,19,.85); border: 1px solid var(--edge); border-radius: 3px;
-    color: var(--ink); font-family: var(--body); font-size: 1rem;
-    padding: .42rem .6rem; outline: none; max-width: 62vw;
+    background: rgba(8,10,14,.9); border: 1px solid var(--edge); border-radius: 2px;
+    color: var(--ink); font-family: var(--body); font-size: 1rem; padding: .42rem .6rem; outline: none; max-width: 62vw;
   }
-  select#progress:focus { border-color: var(--volt); }
-  select#progress option { background: #11151c; }
+  select#progress:focus { border-color: var(--amber); }
+  select#progress option { background: #11141a; }
   .toggle { display: inline-flex; align-items: center; gap: .6rem; cursor: pointer; user-select: none; }
   .toggle input { display: none; }
-  .toggle .track {
-    width: 42px; height: 21px; border-radius: 999px;
-    background: rgba(140,180,220,.1); border: 1px solid var(--edge);
-    position: relative; transition: background .2s, box-shadow .2s; flex: none;
-  }
-  .toggle .track::after {
-    content: ""; position: absolute; top: 2px; left: 2px;
-    width: 15px; height: 15px; border-radius: 50%;
-    background: var(--muted); transition: transform .2s, background .2s;
-  }
-  .toggle input:checked + .track { background: rgba(94,200,255,.26); box-shadow: 0 0 12px rgba(94,200,255,.3); }
-  .toggle input:checked + .track::after { transform: translateX(21px); background: var(--volt-b); }
+  .toggle .track { width: 42px; height: 21px; border-radius: 999px; background: rgba(190,202,218,.08); border: 1px solid var(--edge); position: relative; transition: background .2s; flex: none; }
+  .toggle .track::after { content: ""; position: absolute; top: 2px; left: 2px; width: 15px; height: 15px; border-radius: 50%; background: var(--muted); transition: transform .2s, background .2s; }
+  .toggle input:checked + .track { background: rgba(192,138,46,.26); }
+  .toggle input:checked + .track::after { transform: translateX(21px); background: var(--amber-b); }
   .toggle .tlabel { font-size: 1rem; color: var(--muted); font-style: italic; }
   .note-bar { text-align: center; font-size: .96rem; color: var(--muted); padding: .7rem 1rem 0; font-style: italic; }
 
   /* ---------- Book sections ---------- */
   main { max-width: 1140px; margin: 0 auto; padding: 1.6rem 1.2rem 5rem; }
   section.book { margin-top: 4rem; }
-  .book-head {
-    display: flex; align-items: baseline; gap: 1.2rem; flex-wrap: wrap;
-    border-bottom: 1px solid var(--edge); padding-bottom: 1rem;
-  }
-  .book-idx { font-family: var(--mono); font-size: 1.5rem; color: var(--volt); line-height: 1; text-shadow: 0 0 14px rgba(94,200,255,.4); }
-  .book-head h2 {
-    font-family: var(--display); font-weight: 600;
-    font-size: clamp(1.4rem, 3.4vw, 2.1rem); letter-spacing: .09em; text-transform: uppercase;
-    color: #f2f6fb; flex: 1; line-height: 1.1;
-  }
-  .book-head .year { font-family: var(--mono); color: var(--muted); font-size: .64rem; letter-spacing: .22em; }
+  .book-head { display: flex; align-items: baseline; gap: 1.2rem; flex-wrap: wrap; border-bottom: 1px solid var(--edge); padding-bottom: 1rem; }
+  .book-idx { font-family: var(--display); font-size: 1.3rem; color: var(--amber); line-height: 1; }
+  .book-head h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.35rem, 3.2vw, 2rem); letter-spacing: .1em; text-transform: uppercase; color: var(--bone); flex: 1; line-height: 1.12; }
+  .book-head .year { font-family: var(--label); color: var(--muted); font-size: .64rem; letter-spacing: .2em; }
   .book-blurb { color: var(--muted); font-size: 1.14rem; font-style: italic; margin: 1.1rem 0 1.6rem; max-width: 66ch; line-height: 1.55; }
 
-  /* synopsis */
-  .book-synopsis { max-width:72ch; margin:0 0 2rem; text-align:left; border:1px solid var(--edge); border-radius:4px; background:rgba(140,180,220,.03); overflow:hidden; }
+  .book-synopsis { max-width:72ch; margin:0 0 2rem; text-align:left; border:1px solid var(--edge); border-radius:3px; background:rgba(190,202,218,.025); overflow:hidden; }
   .book-synopsis summary { cursor:pointer; list-style:none; padding:.9rem 1.2rem; display:flex; align-items:baseline; gap:.7rem; }
   .book-synopsis summary::-webkit-details-marker { display:none; }
-  .book-synopsis summary::before { content:"\25B8"; color:var(--ember); transition:transform .2s; align-self:center; }
+  .book-synopsis summary::before { content:"\25B8"; color:var(--amber); transition:transform .2s; align-self:center; }
   .book-synopsis[open] summary::before { transform:rotate(90deg); }
-  .book-synopsis .syn-title { font-family:var(--mono); font-size:.64rem; letter-spacing:.2em; text-transform:uppercase; color:var(--ember-b); }
+  .book-synopsis .syn-title { font-family:var(--label); font-size:.64rem; letter-spacing:.2em; text-transform:uppercase; color:var(--amber-b); }
   .book-synopsis .syn-hint { font-family:var(--body); font-style:italic; font-size:1rem; color:var(--muted); margin-left:auto; }
   .book-synopsis .syn-body { padding:0 1.4rem 1.2rem; border-top:1px solid var(--edge); }
-  .book-synopsis .syn-body p { color:var(--ink); font-size:1.1rem; line-height:1.62; margin-top:.9rem; }
+  .book-synopsis .syn-body p { color:var(--ink); font-size:1.1rem; line-height:1.64; margin-top:.9rem; }
   @media (max-width:520px){ .book-synopsis .syn-hint { display:none; } }
   .book-recap { max-width:66ch; margin:0 0 2rem; font-size:1.04rem; line-height:1.5; }
-  .book-recap .recap-label { font-family:var(--mono); font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--ember-b); margin-right:.55rem; }
+  .book-recap .recap-label { font-family:var(--label); font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--amber-b); margin-right:.55rem; }
+
+  /* awaiting-details state for a brand-new book */
+  .book-pending {
+    max-width:72ch; margin:.4rem 0 1rem; padding:1.15rem 1.3rem;
+    border:1px dashed var(--edge-str); border-radius:3px; background:rgba(190,202,218,.02);
+    color:var(--muted); font-size:1.06rem; line-height:1.6; font-style:italic;
+  }
+  .book-pending strong { font-family:var(--label); font-style:normal; font-size:.64rem; letter-spacing:.2em; text-transform:uppercase; color:var(--amber-b); display:block; margin-bottom:.45rem; }
 
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(186px, 1fr)); gap: 1.15rem; }
 
   /* ---------- Cards ---------- */
   .card {
     position: relative;
-    background: linear-gradient(168deg, var(--panel), var(--panel2));
-    border: 1px solid var(--edge); border-radius: 4px;
+    background: linear-gradient(170deg, var(--panel), var(--panel2));
+    border: 1px solid var(--edge); border-radius: 3px;
     padding: 2rem 1rem 1.5rem; text-align: center; cursor: pointer;
     transition: transform .18s, border-color .25s, box-shadow .25s;
   }
-  .card::after {
-    content: ""; position: absolute; top: 0; left: 0; width: 16px; height: 16px;
-    border-top: 1px solid var(--volt); border-left: 1px solid var(--volt);
-    opacity: .45; transition: opacity .25s;
-  }
-  .card:hover { transform: translateY(-4px); border-color: var(--volt); box-shadow: 0 16px 40px rgba(0,0,0,.55), 0 0 22px rgba(94,200,255,.18); }
+  .card::after { content: ""; position: absolute; top: 0; left: 0; width: 15px; height: 15px; border-top: 1px solid var(--amber); border-left: 1px solid var(--amber); opacity: .35; transition: opacity .25s; }
+  .card:hover { transform: translateY(-4px); border-color: var(--edge-str); box-shadow: 0 18px 44px rgba(0,0,0,.7), 0 0 20px rgba(192,138,46,.1); }
   .card:hover::after { opacity: 1; }
-  .card .idx { position: absolute; top: .8rem; right: 1rem; font-family: var(--mono); font-size: .78rem; color: var(--ember); opacity: .85; }
+  .card .idx { position: absolute; top: .8rem; right: 1rem; font-family: var(--display); font-size: .8rem; color: var(--amber); opacity: .7; }
   .pic-wrap { display: block; width: fit-content; margin: 0 auto 1.15rem; position: relative; }
-  .pic-wrap::before {
-    content: ""; position: absolute; inset: -7px; border-radius: 50%;
-    border: 1px solid rgba(255,107,61,.3); transition: border-color .25s, box-shadow .25s;
-  }
-  .card:hover .pic-wrap::before { border-color: var(--ember); box-shadow: 0 0 16px rgba(255,107,61,.35); }
-  .pic {
-    display: block; width: 128px; height: 128px; border-radius: 50%;
-    overflow: hidden; border: 1px solid var(--volt); position: relative; background: #0b0f15;
-    box-shadow: 0 0 12px rgba(94,200,255,.18);
-  }
+  .pic-wrap::before { content: ""; position: absolute; inset: -7px; border-radius: 50%; border: 1px solid rgba(192,138,46,.22); transition: border-color .25s; }
+  .card:hover .pic-wrap::before { border-color: rgba(227,182,98,.6); }
+  .pic { display: block; width: 128px; height: 128px; border-radius: 50%; overflow: hidden; border: 1px solid var(--edge-str); position: relative; background: #0a0c10; }
   .pic svg { width: 100%; height: 100%; display: block; }
-  .pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .35s; }
+  .pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .35s; filter: grayscale(.25) contrast(1.05); }
   .pic img.custom { opacity: 1; }
-  .card h3 {
-    font-family: var(--display); font-weight: 500; font-size: .84rem;
-    letter-spacing: .16em; text-transform: uppercase; color: var(--ink);
-    line-height: 1.5; overflow-wrap: break-word;
-  }
-  .card h3 mark { background: rgba(94,200,255,.25); color: var(--volt-b); border-radius: 2px; padding: 0 2px; }
-  .card .role { font-family: var(--body); font-size: 1.02rem; color: var(--ember-b); font-style: italic; margin-top: .3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card h3 { font-family: var(--display); font-weight: 600; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--bone); line-height: 1.55; overflow-wrap: break-word; }
+  .card h3 mark { background: rgba(192,138,46,.3); color: var(--amber-b); border-radius: 2px; padding: 0 2px; }
+  .card .role { font-family: var(--body); font-size: 1.02rem; color: var(--stone); font-style: italic; margin-top: .3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
   /* ---------- Spoiler ---------- */
   .spoiler { position: relative; cursor: pointer; }
   body.shield-on .spoiler:not(.revealed) {
     display: inline-block; color: transparent;
-    background: repeating-linear-gradient(45deg, #1b222c, #1b222c 6px, #161d26 6px, #161d26 12px);
+    background: repeating-linear-gradient(45deg, #171b22, #171b22 6px, #12161c 6px, #12161c 12px);
     border-radius: 2px; user-select: none;
   }
   body.shield-on .spoiler:not(.revealed)::after {
-    content: "\26A1 spoiler \2014 tap to reveal";
+    content: "spoiler \2014 tap to reveal";
     position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-    color: var(--volt); font-family: var(--body); font-style: italic; font-size: .84rem; letter-spacing: .04em; white-space: nowrap;
+    color: var(--amber-b); font-family: var(--body); font-style: italic; font-size: .84rem; white-space: nowrap;
   }
 
   /* ---------- Modal ---------- */
-  #overlay { position: fixed; inset: 0; z-index: 100; background: rgba(4,6,9,.88); display: none; align-items: flex-start; justify-content: center; padding: 4vh 1rem; overflow-y: auto; }
+  #overlay { position: fixed; inset: 0; z-index: 100; background: rgba(3,4,6,.9); display: none; align-items: flex-start; justify-content: center; padding: 4vh 1rem; overflow-y: auto; }
   #overlay.open { display: flex; }
   .modal {
-    background: linear-gradient(172deg, #161d27, #0b0f15);
-    border: 1px solid var(--volt); border-radius: 6px;
+    background: linear-gradient(172deg, #141821, #080a0e);
+    border: 1px solid var(--edge-str); border-radius: 4px;
     max-width: 640px; width: 100%; padding: 2rem 1.9rem 2.1rem; position: relative;
-    box-shadow: 0 26px 70px rgba(0,0,0,.75), 0 0 40px rgba(94,200,255,.12);
+    box-shadow: 0 28px 80px rgba(0,0,0,.85);
   }
-  .modal .close { position: absolute; top: 1rem; right: 1.1rem; background: none; border: none; color: var(--muted); font-size: 1.3rem; cursor: pointer; font-family: var(--mono); }
-  .modal .close:hover { color: var(--volt); }
+  .modal .close { position: absolute; top: 1rem; right: 1.1rem; background: none; border: none; color: var(--muted); font-size: 1.3rem; cursor: pointer; font-family: var(--body); }
+  .modal .close:hover { color: var(--amber-b); }
   .modal-head { display: flex; gap: 1.4rem; align-items: center; flex-wrap: wrap; }
   .modal-head .pic-wrap { margin: 0; }
   .modal-head .pic { width: 116px; height: 116px; }
-  .modal-head h2 { font-family: var(--display); font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: #f2f6fb; font-size: 1.4rem; line-height: 1.2; }
-  .modal .say { font-family: var(--body); font-style: italic; color: var(--volt); font-size: 1rem; margin-top: .3rem; }
+  .modal-head h2 { font-family: var(--display); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--bone); font-size: 1.38rem; line-height: 1.2; }
+  .modal .say { font-family: var(--body); font-style: italic; color: var(--stone); font-size: 1rem; margin-top: .3rem; }
   .modal-head .aka { color: var(--muted); font-style: italic; font-size: 1rem; margin-top: .35rem; }
-  .modal-head .aff { font-family: var(--mono); color: var(--ember-b); font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; margin-top: .5rem; }
-  .modal .desc { margin-top: 1.25rem; line-height: 1.6; color: var(--ink); font-size: 1.14rem; }
-  .modal blockquote.quote { margin:1.3rem 0 0; padding:.3rem 0 .3rem 1.1rem; border-left:2px solid var(--ember); color:var(--ember-b); font-style:italic; font-size:1.16rem; line-height:1.5; }
-  .modal blockquote.quote cite { display:block; margin-top:.5rem; font-style:normal; font-family:var(--mono); font-size:.6rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
-  .modal h4 { margin-top: 1.6rem; font-family: var(--mono); font-weight: 400; font-size: .6rem; letter-spacing: .28em; text-indent: .28em; text-transform: uppercase; color: var(--volt); text-align: center; }
-  .h4-divider { margin: .6rem auto 1.05rem; width: 66%; height: 1px; background: linear-gradient(90deg, transparent, var(--edge), transparent); font-size: 0; color: transparent; }
+  .modal-head .aff { font-family: var(--label); color: var(--amber-b); font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; margin-top: .5rem; }
+  .modal .desc { margin-top: 1.25rem; line-height: 1.62; color: var(--ink); font-size: 1.14rem; }
+  .modal blockquote.quote { margin:1.3rem 0 0; padding:.3rem 0 .3rem 1.1rem; border-left:2px solid var(--amber); color:var(--amber-b); font-style:italic; font-size:1.16rem; line-height:1.5; }
+  .modal blockquote.quote cite { display:block; margin-top:.5rem; font-style:normal; font-family:var(--label); font-size:.6rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+  .modal h4 { margin-top: 1.6rem; font-family: var(--label); font-weight: 400; font-size: .62rem; letter-spacing: .26em; text-indent: .26em; text-transform: uppercase; color: var(--amber); text-align: center; }
+  .h4-divider { margin: .6rem auto 1.05rem; width: 66%; height: 1px; background: linear-gradient(90deg, transparent, var(--edge-str), transparent); font-size: 0; color: transparent; }
   .modal .app-row { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; }
-  .modal .app-row::before { content: "\26A1"; position: absolute; left: 0; top: .05rem; color: var(--volt); font-size: .8rem; }
-  .modal .app-book { font-family: var(--mono); font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; color: var(--volt-b); }
+  .modal .app-row::before { content: "\2756"; position: absolute; left: 0; top: .1rem; color: var(--amber); font-size: .7rem; }
+  .modal .app-book { font-family: var(--label); font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; color: var(--bone-dim); }
   .modal .app-note { font-size: 1.08rem; color: var(--muted); margin-top: .25rem; line-height: 1.55; }
   .modal .hidden-note { margin-top: 1.1rem; color: var(--muted); font-size: .96rem; text-align: center; font-style: italic; }
   .modal .connections { display: flex; flex-wrap: wrap; gap: .5rem; }
-  .modal .conn { font-family: var(--body); font-size: 1rem; color: var(--ink); background: rgba(140,180,220,.05); border: 1px solid var(--edge); border-radius: 3px; padding: .32rem .8rem; transition: border-color .2s, color .2s; }
+  .modal .conn { font-family: var(--body); font-size: 1rem; color: var(--ink); background: rgba(190,202,218,.04); border: 1px solid var(--edge); border-radius: 2px; padding: .32rem .8rem; transition: border-color .2s, color .2s; }
   .modal .conn[data-id] { cursor: pointer; }
-  .modal .conn[data-id]:hover { border-color: var(--volt); color: var(--volt-b); }
+  .modal .conn[data-id]:hover { border-color: var(--amber); color: var(--amber-b); }
   .modal .conn .rel { color: var(--muted); font-style: italic; }
 
   .empty-msg { text-align: center; color: var(--muted); padding: 3rem 1rem; display: none; font-size: 1.1rem; font-style: italic; }
-  footer { text-align: center; color: #5d6977; font-size: .95rem; font-family: var(--body); font-style: italic; padding: 2.6rem 1rem 3.4rem; line-height: 1.75; }
-  footer em { color: var(--volt); font-style: normal; }
+  footer { text-align: center; color: #5a626e; font-size: .95rem; font-family: var(--body); font-style: italic; padding: 2.6rem 1rem 3.4rem; line-height: 1.75; }
+  footer em { color: var(--amber); font-style: normal; }
 
   /* ---------- Parallax ---------- */
   #parallax { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
@@ -260,47 +229,96 @@
 
 
 <div id="parallax" aria-hidden="true">
-  <!-- lightning, upper right -->
-  <div class="plx" data-speed="0.08" style="top:-2vh; right:-4vmin;">
-    <svg viewBox="0 0 200 240" style="width:42vmin;height:auto;min-width:200px;">
-      <g fill="none" stroke="#5ec8ff" stroke-width="1.6" opacity=".16" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M120 10 L92 96 L126 96 L84 210"/>
-        <path d="M156 40 L138 100 L162 100 L132 170" opacity=".7"/>
-      </g>
-      <g fill="#5ec8ff" opacity=".12">
-        <circle cx="60" cy="60" r="2"/><circle cx="170" cy="150" r="2.4"/><circle cx="40" cy="170" r="1.6"/>
-      </g>
+  <!-- wing of dragons, upper right -->
+  <div class="plx" data-speed="0.07" style="top:4vh; right:2vw;">
+    <svg viewBox="0 0 620 420" style="width:58vmin;height:auto;min-width:320px;">
+      <g transform="translate(300 10) scale(0.85)"><g fill="#0d1117" opacity="0.55" transform="scale(1)">
+        <path d="M110 8 C105 15 104 22 105 30 L115 30 C116 22 115 15 110 8 Z"/>
+        <path d="M105 30 C102 48 102 74 105 98 L115 98 C118 74 118 48 115 30 Z"/>
+        <path d="M108 96 C107 112 106 126 103 142 L110 130 L117 142 C114 126 113 112 112 96 Z"/>
+        <path d="M106 38 C86 31 58 27 20 31 C33 37 47 45 59 55 C49 55 39 57 29 61 C43 64 57 70 69 78 C61 80 53 84 47 90 C61 88 76 88 88 92 C96 85 102 75 106 64 Z"/>
+        <path d="M114 38 C134 31 162 27 200 31 C187 37 173 45 161 55 C171 55 181 57 191 61 C177 64 163 70 151 78 C159 80 167 84 173 90 C159 88 144 88 132 92 C124 85 118 75 114 64 Z"/>
+      </g></g>
+      <g transform="translate(90 120) scale(0.55)"><g fill="#0d1117" opacity="0.4" transform="scale(1)">
+        <path d="M110 8 C105 15 104 22 105 30 L115 30 C116 22 115 15 110 8 Z"/>
+        <path d="M105 30 C102 48 102 74 105 98 L115 98 C118 74 118 48 115 30 Z"/>
+        <path d="M108 96 C107 112 106 126 103 142 L110 130 L117 142 C114 126 113 112 112 96 Z"/>
+        <path d="M106 38 C86 31 58 27 20 31 C33 37 47 45 59 55 C49 55 39 57 29 61 C43 64 57 70 69 78 C61 80 53 84 47 90 C61 88 76 88 88 92 C96 85 102 75 106 64 Z"/>
+        <path d="M114 38 C134 31 162 27 200 31 C187 37 173 45 161 55 C171 55 181 57 191 61 C177 64 163 70 151 78 C159 80 167 84 173 90 C159 88 144 88 132 92 C124 85 118 75 114 64 Z"/>
+      </g></g>
+      <g transform="translate(400 210) scale(0.38)"><g fill="#0d1117" opacity="0.3" transform="scale(1)">
+        <path d="M110 8 C105 15 104 22 105 30 L115 30 C116 22 115 15 110 8 Z"/>
+        <path d="M105 30 C102 48 102 74 105 98 L115 98 C118 74 118 48 115 30 Z"/>
+        <path d="M108 96 C107 112 106 126 103 142 L110 130 L117 142 C114 126 113 112 112 96 Z"/>
+        <path d="M106 38 C86 31 58 27 20 31 C33 37 47 45 59 55 C49 55 39 57 29 61 C43 64 57 70 69 78 C61 80 53 84 47 90 C61 88 76 88 88 92 C96 85 102 75 106 64 Z"/>
+        <path d="M114 38 C134 31 162 27 200 31 C187 37 173 45 161 55 C171 55 181 57 191 61 C177 64 163 70 151 78 C159 80 167 84 173 90 C159 88 144 88 132 92 C124 85 118 75 114 64 Z"/>
+      </g></g>
+      <g transform="translate(210 290) scale(0.22)"><g fill="#0d1117" opacity="0.22" transform="scale(1)">
+        <path d="M110 8 C105 15 104 22 105 30 L115 30 C116 22 115 15 110 8 Z"/>
+        <path d="M105 30 C102 48 102 74 105 98 L115 98 C118 74 118 48 115 30 Z"/>
+        <path d="M108 96 C107 112 106 126 103 142 L110 130 L117 142 C114 126 113 112 112 96 Z"/>
+        <path d="M106 38 C86 31 58 27 20 31 C33 37 47 45 59 55 C49 55 39 57 29 61 C43 64 57 70 69 78 C61 80 53 84 47 90 C61 88 76 88 88 92 C96 85 102 75 106 64 Z"/>
+        <path d="M114 38 C134 31 162 27 200 31 C187 37 173 45 161 55 C171 55 181 57 191 61 C177 64 163 70 151 78 C159 80 167 84 173 90 C159 88 144 88 132 92 C124 85 118 75 114 64 Z"/>
+      </g></g>
     </svg>
   </div>
-  <!-- dragon in flight, left -->
-  <div class="plx" data-speed="0.2" style="top:54vh; left:-3vw;">
-    <svg viewBox="0 0 320 190" style="width:40vmin;height:auto;min-width:230px;">
-      <g fill="none" stroke="#8795a8" stroke-width="1.3" opacity=".15">
-        <path d="M28 104 Q62 94 96 98 L164 102 Q232 108 296 146 Q268 132 238 128 Q188 120 150 116 L104 110 Q62 112 28 104 Z"/>
-        <path d="M96 98 L126 24 L188 54 L164 102 Z"/>
-        <path d="M164 102 L212 34 L268 72 L228 112 Z"/>
-        <path d="M28 104 L10 96 L26 92"/>
-      </g>
+  <!-- lone dragon banking, left -->
+  <div class="plx" data-speed="0.2" style="top:62vh; left:-2vw;">
+    <svg viewBox="0 0 240 170" style="width:34vmin;height:auto;min-width:200px;">
+      <g transform="rotate(-14 110 80)"><g fill="#0e1218" opacity="0.42" transform="scale(1)">
+        <path d="M110 8 C105 15 104 22 105 30 L115 30 C116 22 115 15 110 8 Z"/>
+        <path d="M105 30 C102 48 102 74 105 98 L115 98 C118 74 118 48 115 30 Z"/>
+        <path d="M108 96 C107 112 106 126 103 142 L110 130 L117 142 C114 126 113 112 112 96 Z"/>
+        <path d="M106 38 C86 31 58 27 20 31 C33 37 47 45 59 55 C49 55 39 57 29 61 C43 64 57 70 69 78 C61 80 53 84 47 90 C61 88 76 88 88 92 C96 85 102 75 106 64 Z"/>
+        <path d="M114 38 C134 31 162 27 200 31 C187 37 173 45 161 55 C171 55 181 57 191 61 C177 64 163 70 151 78 C159 80 167 84 173 90 C159 88 144 88 132 92 C124 85 118 75 114 64 Z"/>
+      </g></g>
     </svg>
   </div>
-  <!-- talon scores, right -->
-  <div class="plx" data-speed="0.14" style="top:104vh; right:3vw;">
-    <svg viewBox="0 0 160 220" style="width:22vmin;height:auto;min-width:110px;">
-      <g fill="none" stroke="#ff6b3d" stroke-width="2" opacity=".13" stroke-linecap="round">
-        <path d="M30 10 Q54 90 44 210"/>
-        <path d="M70 4 Q96 90 86 206"/>
-        <path d="M110 16 Q134 96 124 200"/>
-      </g>
+  <!-- mist band -->
+  <div class="plx" data-speed="0.12" style="top:118vh; left:0; width:100%;">
+    <svg viewBox="0 0 1200 180" preserveAspectRatio="none" style="width:100%;height:22vmin;">
+      <defs><linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#9fb0c4" stop-opacity="0"/>
+        <stop offset="55%" stop-color="#9fb0c4" stop-opacity=".07"/>
+        <stop offset="100%" stop-color="#9fb0c4" stop-opacity="0"/>
+      </linearGradient></defs>
+      <rect width="1200" height="180" fill="url(#mist)"/>
     </svg>
   </div>
-  <!-- Basgiath ridge, lower band -->
-  <div class="plx" data-speed="0.3" style="top:156vh; left:0; width:100%;">
-    <svg viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax meet" style="width:100%;height:auto;">
-      <path fill="none" stroke="#5a6b80" stroke-width="1.3" opacity=".17" d="M0 260 L110 140 L190 196 L300 92 L360 150 L430 110 L520 184 L610 80 L700 168 L790 120 L880 198 L980 118 L1080 190 L1200 140 L1200 260 Z"/>
-      <g fill="none" stroke="#5ec8ff" stroke-width="1.2" opacity=".14">
-        <path d="M588 80 L588 44 L600 36 L612 44 L612 80"/>
-        <path d="M676 168 L676 128 L688 120 L700 128 L700 168"/>
-        <path d="M500 184 L500 150 L512 142 L524 150 L524 184"/>
+  <!-- the citadel and the parapet, lower band -->
+  <div class="plx" data-speed="0.3" style="top:150vh; left:0; width:100%;">
+    <svg viewBox="0 0 1200 340" preserveAspectRatio="xMidYMax meet" style="width:100%;height:auto;">
+      <g fill="#0b0e13" opacity=".92">
+        <!-- left cliff -->
+        <path d="M0 340 L0 150 L58 136 L104 158 L150 142 L196 178 L228 212 L250 340 Z"/>
+        <!-- right cliff -->
+        <path d="M980 340 L962 196 L1004 164 L1054 182 L1104 150 L1158 168 L1200 150 L1200 340 Z"/>
+      </g>
+      <!-- towers on the left cliff -->
+      <g fill="#0b0e13" opacity=".95">
+        <path d="M44 140 L44 74 L52 58 L60 74 L60 140 Z"/>
+        <path d="M74 150 L74 96 L82 82 L90 96 L90 150 Z"/>
+        <path d="M112 160 L112 60 L122 42 L132 60 L132 160 Z"/>
+        <rect x="96" y="112" width="52" height="54"/>
+      </g>
+      <!-- towers on the right cliff -->
+      <g fill="#0b0e13" opacity=".95">
+        <path d="M1032 170 L1032 104 L1040 88 L1048 104 L1048 170 Z"/>
+        <path d="M1094 156 L1094 100 L1102 84 L1110 100 L1110 156 Z"/>
+        <rect x="1046" y="128" width="48" height="48"/>
+      </g>
+      <!-- the parapet bridge -->
+      <g stroke="#0b0e13" fill="none" stroke-width="7" opacity=".95">
+        <path d="M250 206 L980 206"/>
+      </g>
+      <g stroke="#131922" fill="none" stroke-width="3" opacity=".9">
+        <path d="M280 208 Q615 288 950 208"/>
+        <path d="M360 214 L360 238 M470 222 L470 254 M615 228 L615 262 M760 222 L760 254 M870 214 L870 238"/>
+      </g>
+      <!-- candle glow -->
+      <g fill="#c08a2e" opacity=".5">
+        <circle cx="121" cy="128" r="1.7"/><circle cx="83" cy="124" r="1.4"/>
+        <circle cx="1040" cy="146" r="1.5"/><circle cx="1101" cy="140" r="1.3"/>
       </g>
     </svg>
   </div>
@@ -308,15 +326,13 @@
 
 <header>
   <div class="mark">
-    <svg viewBox="0 0 110 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g fill="none" stroke="#5ec8ff" stroke-width="1.5" opacity=".9" stroke-linejoin="round">
-        <path d="M10 48 Q30 40 50 44 L78 47 Q96 50 102 62 Q88 55 72 54 L46 52 Q26 54 10 48 Z"/>
-        <path d="M50 44 L62 14 L86 26 L78 47 Z"/>
-      </g>
-      <g fill="none" stroke="#ff6b3d" stroke-width="1.8" stroke-linecap="round" opacity=".95">
-        <path d="M30 20 L22 40 L32 40 L20 64"/>
-      </g>
-    </svg>
+    <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="#e2dccf" opacity="0.95" transform="scale(1)">
+        <path d="M110 8 C105 15 104 22 105 30 L115 30 C116 22 115 15 110 8 Z"/>
+        <path d="M105 30 C102 48 102 74 105 98 L115 98 C118 74 118 48 115 30 Z"/>
+        <path d="M108 96 C107 112 106 126 103 142 L110 130 L117 142 C114 126 113 112 112 96 Z"/>
+        <path d="M106 38 C86 31 58 27 20 31 C33 37 47 45 59 55 C49 55 39 57 29 61 C43 64 57 70 69 78 C61 80 53 84 47 90 C61 88 76 88 88 92 C96 85 102 75 106 64 Z"/>
+        <path d="M114 38 C134 31 162 27 200 31 C187 37 173 45 161 55 C171 55 181 57 191 61 C177 64 163 70 151 78 C159 80 167 84 173 90 C159 88 144 88 132 92 C124 85 118 75 114 64 Z"/>
+      </g></svg>
   </div>
   <div class="eyebrow">The Empyrean</div>
   <h1>Fourth Wing</h1>
@@ -372,6 +388,9 @@ const BOOKS = [
     blurb:"Violet survived her first year and the secrets that came with it. Now a brutal new regime runs Basgiath, every lesson is a trap, and the war Navarre swore didn’t exist is pressing in from every border." },
   { id:'onyx', num:'#3', title:'Onyx Storm', year:2025,
     blurb:"With the wards failing and the venin spreading, Violet must cross unmapped seas in search of allies, answers, and a power old enough to matter — and decide what she will spend to save everyone she loves." },
+  { id:'threshing', num:'#4', title:'Threshing Day', year:2026,
+    blurb:"The fourth book in Rebecca Yarros’s Empyrean series.",
+    pending:"Synopsis and character entries for Threshing Day are still being written — this section will fill in like the others." },
 ];
 const IDX = Object.fromEntries(BOOKS.map((b,i)=>[b.id,i]));
 
@@ -815,10 +834,10 @@ function avatarSVG(ch){
 
 /* Colored monogram fallback for characters without a portrait. */
 const MONO_PALETTE = [
-  ['#2f6d94','#071118'], ['#8a4a2a','#1a0c06'], ['#3a5f7a','#09131a'],
-  ['#7a3a42','#180a0d'], ['#4a6a7c','#0b141a'], ['#9a6a3a','#1d1206'],
-  ['#345c8c','#081020'], ['#6a4a7c','#120c1a'], ['#2a6a66','#06160f'],
-  ['#8a5a4a','#190f0b'], ['#4a7a8c','#0a161c'], ['#6a6a3a','#13130a'],
+  ['#2b323c','#0a0d12'], ['#343b44','#0c0f14'], ['#272e38','#090c10'],
+  ['#3a3f47','#0d1015'], ['#2e3741','#0a0e13'], ['#383c42','#0c1014'],
+  ['#2a333f','#090d12'], ['#363d46','#0b0f14'], ['#30363f','#0a0e12'],
+  ['#3d4149','#0e1116'], ['#2c343e','#090c11'], ['#343a43','#0b0e13'],
 ];
 function initialsFor(name){
   const skip = new Set(['the','of','and','a']);
@@ -843,8 +862,8 @@ function monogramSVG(ch){
   </radialGradient></defs>
   <rect width="100" height="100" fill="url(#${gid})"/>
   <text x="50" y="52" text-anchor="middle" dominant-baseline="middle"
-    font-family="'Oswald','Arial Narrow',sans-serif" font-weight="600"
-    font-size="${fs}" letter-spacing="1" fill="#f4ecd6" fill-opacity="0.95">${ini}</text>
+    font-family="'Cinzel',Georgia,serif" font-weight="600"
+    font-size="${fs}" letter-spacing="1" fill="#e2dccf" fill-opacity="0.92">${ini}</text>
 </svg>`;
 }
 
@@ -975,7 +994,23 @@ function render(){
       .filter(ch => !q || searchHaystack(ch).includes(q))
       .sort((a,b)=> b.books[book.id].p - a.books[book.id].p);
 
-    if (!chars.length) return;
+    if (!chars.length) {
+      if (book.pending && !q) {
+        const sec = document.createElement('section');
+        sec.className = 'book';
+        sec.innerHTML = `
+          <div class="book-head">
+            <span class="book-idx">/${String(bi).padStart(2,'0')}</span>
+            <h2>${esc(book.title)}</h2>
+            <span class="year">${book.num} — ${book.year}</span>
+          </div>
+          <p class="book-blurb">${esc(book.blurb)}</p>
+          <div class="book-pending"><strong>Entries in progress</strong>${esc(book.pending)}</div>`;
+        main.appendChild(sec);
+        anyShown = true;
+      }
+      return;
+    }
     anyShown = true;
 
     const sec = document.createElement('section');
